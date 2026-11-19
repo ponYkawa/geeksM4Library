@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.title }}</title>
+</head>
+<body>
+    <h1>{{ book.title }}</h1>
+    {% if book.cover_url %}
+        <img src="{{ book.cover_url }}" width="250">
+    {% endif %}
+    <p>Автор: {{ book.author }}</p>
+    <p>Жанр: {{ book.genre }}</p>
+    <p>Год: {{ book.year }}</p>
+    <p>Страниц: {{ book.pages }}</p>
+    <p>Цена: {{ book.price }} сом</p>
+    <p>В наличии: {% if book.is_available %}Да{% else %}Нет{% endif %}</p>
+    <p>{{ book.description }}</p>
+    <a href="/books/">Назад к списку</a>
+</body>
+</html>

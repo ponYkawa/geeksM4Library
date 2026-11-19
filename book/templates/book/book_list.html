@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Все книги</title>
+</head>
+<body>
+    <h1>Все книги</h1>
+    {% for book in books %}
+        <div>
+            <h3>{{ book.title }}</h3>
+            <p>{{ book.author }} — {{ book.price }} сом</p>
+            <a href="/books/{{ book.id }}/">Подробнее</a>
+        </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>
